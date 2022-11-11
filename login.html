@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% block content %}
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="newCSS.css">
+</head>
+<body>
+
+    <div class="header-bar">
+        <h1>Login</h1>
+    </div>
+
+    <div class="card-body">
+
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class="button" type="submit" value="Login"/>
+
+        </form>
+        <p>Don't have an account?</p><a href="{% url 'register' %}">Register</a>
+
+    </div>
+
+</body>
+</html>
+{% endblock content %}
