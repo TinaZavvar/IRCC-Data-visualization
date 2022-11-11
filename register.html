@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% block content %}
+<html>
+
+<head>
+    <link rel="stylesheet" href="newCSS.css">
+</head>
+<body>
+
+
+    <div class="header-bar">
+        <h1>Register</h1>
+    </div>
+    <div class="card-body">
+        <form method="POST" class="register-form" id="register-form">
+            <div class="form-group">
+            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+            <input type="text" name="name" id="name" placeholder="Full Name">
+            </div>
+            <div class="p-t-15"><p>Gender:</p>
+                <label class="radio-container m-r-55">Female
+                <input type="radio" checked="checked" name="exist">
+                <span class="checkmark">
+                </label>
+                <label class="radio-container">Male
+                <input type="radio" name="exist">
+                <span class="checkmark"></span>
+                </label>
+             </div>
+            <div class="form-group">
+            <label for="DB"><i class="zmdi zmdi-calendar"></i></label>
+            <input type="number" name="DB" id="username" placeholder="Date of Birth: DD/MM/YYY">
+            </div>
+            <div class="form-group">
+            <label for="username"><i class="zmdi zmdi-account-circle"></i></label>
+            <input type="text" name="username" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+            <input type="password" name="pass" id="pass" placeholder="Password">
+            </div>
+            <p><input class="button" type="submit" value="Register"/></p>
+            <!-- <h3>Get the premium membership </h3>
+            <p><input class="button" type="submit" value="Click here"/></p> -->
+
+            <hr>
+            <p>Already have an account?</p><a href="{% url 'login' %}">Login</a>
+
+    </div>
+
+</body>
+</html>
+{% endblock content %}
+
+
+
+
